@@ -129,16 +129,20 @@ nav .nav-links li {
   color: #650300;
   padding-top: 2rem;
 }
-.showCase .seriesCards {
+
+.seriesCards {
   display: flex;
   gap: 1rem;
   text-align: center;
 }
-.showCase .seriesCards img {
-  width: 20rem;
-  margin-bottom: 1rem;
+.seriesCards img {
+  width: 100%;
+  width: 416px;
+  height: 416px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.showCase .seriesCards h3 {
+.seriesCards h3 {
   color: #AA0601;
   font-weight: bold;
   font-size: 2.5rem;
@@ -148,29 +152,20 @@ nav .nav-links li {
   background-image: url(../images/index-bg.png);
   background-position: center;
   background-size: cover;
-  padding: 3rem 0rem;
-}
-.collab .showCase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 80%;
+  padding: 2rem 0rem;
 }
 .collab .showCase .title {
   margin-bottom: 2rem;
   font-weight: bold;
   font-size: 3rem;
   color: white;
-  padding-top: 2rem;
 }
 .collab .showCase .cards {
   display: flex;
   justify-content: center;
 }
 .collab .showCase .cards img {
-  width: 30rem;
+  width: 100%;
   display: block;
 }
 .collab .showCase .cards h3 {
@@ -179,6 +174,34 @@ nav .nav-links li {
   font-size: 2rem;
   color: #AA0601;
   font-weight: bold;
+}
+
+.recommendation .customerCards {
+  display: flex;
+  justify-content: space-around; /* 確保卡片之間有均勻的間距 */
+  gap: 1rem;
+}
+.recommendation .customerCards .customerCard {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.recommendation .customerCards .customerCard img {
+  width: 100%;
+}
+.recommendation .customerCards .customerCard .detail {
+  padding: 1rem;
+}
+.recommendation .customerCards .customerCard .detail .name, .recommendation .customerCards .customerCard .detail .comment {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.recommendation .customerCards .customerCard .detail .date {
+  color: gray;
+  font-weight: normal;
+  padding-top: 1rem;
+}
+
+.contact {
+  background-color: #FBF2F2;
 }
 
 /* 桌上型電腦：至少要1024px以上 */

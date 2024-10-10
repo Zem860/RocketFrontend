@@ -1,14 +1,34 @@
-@mixin titleStyles($color: $subtitle-red, $font-size: 3rem, $margin-bottom: 2rem) {
-    margin-bottom: $margin-bottom;
-    font-weight: bold;
-    font-size: $font-size;
-    color: $color;
+@mixin default {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+@mixin titleStyles(
+  $color: $subtitle-red,
+  $font-size: 3rem,
+  $margin-bottom: 2rem
+) {
+  margin-bottom: $margin-bottom;
+  font-weight: bold;
+  font-size: $font-size;
+  color: $color;
 }
 
+@mixin flexSetMiddle($flex-direction: column) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $flex-direction;
+}
 
-@mixin flexSetMiddle( $flex-direction: column){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $flex-direction;
+@mixin showCaseStyle() {
+  @include flexSetMiddle();
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 5rem;
+  .title {
+    @include titleStyles();
+    padding-top: 2rem;
+  }
 }
