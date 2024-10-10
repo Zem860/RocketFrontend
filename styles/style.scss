@@ -82,10 +82,7 @@ nav {
 padding: 3rem 0rem;
   margin: 0 auto;
   width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flexSetMiddle();
     .title{
         @include titleStyles(); 
     }
@@ -93,10 +90,7 @@ padding: 3rem 0rem;
         display: flex;
         gap:2rem;
         .logoContainer{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flexSetMiddle();
             img{
                 width: 7rem;
             };
@@ -115,14 +109,27 @@ padding: 3rem 0rem;
 }
 
 .showCase{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexSetMiddle();
     margin: 0 auto;
     width: 80%;
     .title{
         @include titleStyles();
+        padding-top: 2rem;
+    }
+    .seriesCards{
+        display: flex;
+        
+        gap:1rem;
+        text-align: center;
+        img{
+            width: 17rem;
+            margin-bottom: 1rem;
+        }
+        h3{
+            color:$main-red;
+            font-weight: bold;
+            font-size: 2rem;
+        }
     }
 }
 
