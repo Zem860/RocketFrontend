@@ -120,6 +120,7 @@ nav .nav-links li {
   flex-direction: column;
   margin: 0 auto;
   width: 80%;
+  margin-bottom: 5rem;
 }
 .showCase .title {
   margin-bottom: 2rem;
@@ -134,13 +135,50 @@ nav .nav-links li {
   text-align: center;
 }
 .showCase .seriesCards img {
-  width: 17rem;
+  width: 20rem;
   margin-bottom: 1rem;
 }
 .showCase .seriesCards h3 {
   color: #AA0601;
   font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.collab {
+  background-image: url(../images/index-bg.png);
+  background-position: center;
+  background-size: cover;
+  padding: 3rem 0rem;
+}
+.collab .showCase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+.collab .showCase .title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+  padding-top: 2rem;
+}
+.collab .showCase .cards {
+  display: flex;
+  justify-content: center;
+}
+.collab .showCase .cards img {
+  width: 30rem;
+  display: block;
+}
+.collab .showCase .cards h3 {
+  background-color: white;
+  text-align: center;
   font-size: 2rem;
+  color: #AA0601;
+  font-weight: bold;
 }
 
 /* 桌上型電腦：至少要1024px以上 */

@@ -112,23 +112,55 @@ padding: 3rem 0rem;
     @include flexSetMiddle();
     margin: 0 auto;
     width: 80%;
+    margin-bottom: 5rem;
     .title{
         @include titleStyles();
         padding-top: 2rem;
     }
     .seriesCards{
         display: flex;
-        
         gap:1rem;
         text-align: center;
         img{
-            width: 17rem;
+            width: 20rem;
             margin-bottom: 1rem;
         }
         h3{
             color:$main-red;
             font-weight: bold;
-            font-size: 2rem;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.collab{
+    background-image: url(../images/index-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 3rem 0rem;
+
+    .showCase{
+        @include flexSetMiddle();
+        margin: 0 auto;
+        width: 80%;
+        .title{
+            @include titleStyles($color:white);
+            padding-top: 2rem;
+        }
+        .cards{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 30rem;
+                display: block;
+            }
+            h3{
+                background-color: white;
+                text-align: center;
+                font-size: 2rem;
+                color:$main-red;
+                font-weight: bold;
+            }
         }
     }
 }
