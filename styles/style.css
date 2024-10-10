@@ -10,6 +10,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: #AA0601;
+  z-index: 2;
 }
 nav ul {
   display: flex;
@@ -26,7 +27,7 @@ nav .logo img {
 nav .nav-links {
   display: flex;
   justify-content: space-around;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 nav .nav-links li {
   padding: 1rem;
@@ -65,8 +66,51 @@ nav .nav-links li {
   font-weight: bold;
   padding: 0.2rem 0.5rem;
   background-color: #AA0601;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
+}
+
+.feature {
+  background-color: #fbf2f2;
+  color: #AA0601;
+}
+
+.featureWrapper {
+  padding: 3rem 0rem;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.featureWrapper .title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #650300;
+}
+.featureWrapper .featureCards {
+  display: flex;
+  gap: 2rem;
+}
+.featureWrapper .featureCards .logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.featureWrapper .featureCards .logoContainer img {
+  width: 7rem;
+}
+.featureWrapper .featureCards .logoContainer p {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.featureWrapper .featureCards .content {
+  font-weight: bold;
+  color: black;
 }
 
 /* 桌上型電腦：至少要1024px以上 */
