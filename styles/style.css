@@ -1,0 +1,44 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+nav {
+  background-color: #AA0601;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .logo img {
+  width: 3rem;
+}
+nav .nav-links {
+  display: flex;
+  justify-content: space-around;
+  color: #FFFFFF;
+}
+nav .nav-links li {
+  padding: 1rem;
+}
+
+/* 桌上型電腦：至少要1024px以上 */
+@media (min-width: 1024px) {
+  /* 在這裡寫桌上型電腦的樣式 */
+}
+/* 平板電腦：720px～1024px */
+@media (min-width: 720px) and (max-width: 1024px) {
+  /* 在這裡寫平板電腦的樣式 */
+}
+/* 手機：320px～720px */
+@media (max-width: 720px) {
+  /* 在這裡寫手機的樣式 */
+}/*# sourceMappingURL=style.css.map */
