@@ -113,6 +113,21 @@ nav .nav-links li {
   color: black;
 }
 
+.showCase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+.showCase .title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #650300;
+}
+
 /* 桌上型電腦：至少要1024px以上 */
 @media (min-width: 1024px) {
   /* 在這裡寫桌上型電腦的樣式 */

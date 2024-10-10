@@ -1,0 +1,6 @@
+@mixin titleStyles($color: $subtitle-red, $font-size: 3rem, $margin-bottom: 2rem) {
+    margin-bottom: $margin-bottom;
+    font-weight: bold;
+    font-size: $font-size;
+    color: $color;
+}

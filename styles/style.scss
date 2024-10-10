@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixin';
 * {
   margin: 0;
   padding: 0;
@@ -78,7 +79,7 @@ nav {
 }
 
 .featureWrapper {
-    padding: 3rem 0rem;
+padding: 3rem 0rem;
   margin: 0 auto;
   width: 80%;
   display: flex;
@@ -86,10 +87,7 @@ nav {
   align-items: center;
   flex-direction: column;
     .title{
-        margin-bottom: 2rem;
-        font-weight: bold;
-        font-size: 3rem;
-        color: $subtitle-red;
+        @include titleStyles(); 
     }
     .featureCards{
         display: flex;
@@ -113,6 +111,18 @@ nav {
             color:black;
         }
 
+    }
+}
+
+.showCase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    .title{
+        @include titleStyles();
     }
 }
 
