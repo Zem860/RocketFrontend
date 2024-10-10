@@ -7,6 +7,8 @@
 }
 
 nav {
+    position: sticky;
+    top:0;
     background-color:$main-red;
     ul{
         display: flex;
@@ -32,6 +34,42 @@ nav {
     }
 }
 
+.banner{
+    position: relative;
+    width: 100%;
+    height: 40vw;
+    background-image: url("../images/home-header.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.bannerMessage{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    top: 20vh;
+    right: 30vh;
+    color:#650300;
+    p{
+        margin-bottom: 0.5rem;
+    }
+    .msg{
+        font-size: 1.5rem;
+    }
+    .slogan{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .bannerBtn{
+        font-weight: bold;
+        padding:  0.2rem 0.5rem;
+        background-color: $main-red;
+        color:#FFFFFF;
+        font-weight: bold;
+    }
+}
 
 /* 桌上型電腦：至少要1024px以上 */
 @media (min-width: 1024px) {
