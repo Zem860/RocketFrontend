@@ -1,7 +1,12 @@
 @import 'variables';
 @import 'mixin';
+
+
+
 * {
-@include default()
+  @include default();
+  font-family: $chinese-text;
+
 }
 
 nav {
@@ -24,6 +29,7 @@ nav {
   }
 
   .nav-links {
+    font-family: $chinese-text;
     display: flex;
     justify-content: space-around;
     color: #ffffff;
@@ -56,6 +62,10 @@ nav {
   }
   .msg {
     font-size: 1.5rem;
+    font-family: $chinese-text;
+    .msg-en{
+      font-family: $default-text;
+    }
   }
   .slogan {
     font-size: 3rem;
@@ -80,109 +90,126 @@ nav {
   margin: 0 auto;
   width: 80%;
   @include flexSetMiddle();
-    .title{
-        @include titleStyles(); 
+  .title {
+    @include titleStyles();
+  }
+  .featureCards {
+    display: flex;
+    gap: 2rem;
+    .logoContainer {
+      @include flexSetMiddle();
+      img {
+        width: 7rem;
+      }
+      p {
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
     }
-    .featureCards{
-        display: flex;
-        gap:2rem;
-        .logoContainer{
-            @include flexSetMiddle();
-            img{
-                width: 7rem;
-            };
-            p{
-                font-size: 2rem;
-                margin-top: 0;
-                margin-bottom: 1rem;
-            }
-        }
-        .content{
-            font-weight: bold;
-            color:black;
-        }
+    .content {
+      font-weight: bold;
+      color: black;
     }
+  }
 }
 
-.showCase{
-  @include showCaseStyle()
+.showCase {
+  @include showCaseStyle();
 }
 
 .seriesCards{
+  font-family: $default-text;
   display: flex;
-  gap:1rem;
-  text-align: center;
-  img{
+  gap:2rem;
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex:1 0 300px;
+    
+    img{
       width: 100%;
-      width: 416px; 
-      height: 416px;
-      object-fit: cover; 
-  }
-  h3{
-      color:$main-red;
-      font-weight: bold;
-      font-size: 2.5rem;
-  }
-}
-
-.collab{
-    background-image: url(../images/index-bg.png);
-    background-position: center;
-    background-size: cover;
-    padding: 2rem 0rem;
-    .showCase{
-        .title{
-            @include titleStyles($color:white);
-        }
-        .cards{
-            display: flex;
-            justify-content: center;
-            
-            img{
-                width: 100%;
-                display: block;
-            }
-            h3{
-                background-color: white;
-                text-align: center;
-                font-size: 2rem;
-                color:$main-red;
-                font-weight: bold;
-            }
-        }
     }
+    h3{
+      color:$main-red;
+      font-size: 2rem;
+    }
+
+  }
+
 }
 
-.recommendation{
 
-  .customerCards{
+
+.collab {
+  background-image: url(../images/index-bg.png);
+  background-position: center;
+  background-size: cover;
+  padding: 2rem 0rem;
+  .showCase {
+    .title {
+      @include titleStyles($color: white);
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+      h3 {
+        background-color: white;
+        text-align: center;
+        font-size: 2rem;
+        color: $main-red;
+        font-weight: bold;
+        font-family: $default-text;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+.recommendation {
+  .customerCards {
     display: flex;
     justify-content: space-around; /* 確保卡片之間有均勻的間距 */
     gap: 1rem;
-    .customerCard{
+    .customerCard {
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-      img{
+      img {
         width: 100%;
       }
-     .detail{
-      padding: 1rem;
-      .name, .comment{
-        font-weight: bold;
-        margin-bottom: 1rem;
+      .detail {
+        padding: 1rem;
+        .name,
+        .comment {
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+        .date {
+          color: gray;
+          font-weight: normal;
+          padding-top: 1rem;
+        }
       }
-      .date{
-        color:gray;
-        font-weight: normal;
-        padding-top: 1rem;
-      }
-     }
     }
-   
   }
 }
 
-.contact{
-  background-color: #FBF2F2;
+.contact {
+  background-color: #fbf2f2;
+  .showCase {
+    width: 50%;
+  }
+  .userInquiryMessage {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
 /* 桌上型電腦：至少要1024px以上 */
