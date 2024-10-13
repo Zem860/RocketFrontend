@@ -519,9 +519,38 @@ footer {
 
 }
 
-/* 手機：320px～720px */
 @media (max-width: 768px) {
-  /* 在這裡寫手機的樣式 */
+
+  nav{
+    .logo{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      img{
+        width: 10rem;
+        padding: 1rem;
+      }
+    }
+
+    ul{
+      display: flex;
+      flex-direction: column;
+
+      .nav-links{
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+
+        li{
+          border: 1px solid white;
+          font-size: 2rem;
+          flex: 0 0 50%;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
   .banner {
     background-image: url(../images/home-header-sm.png);
     height: 80vh;
@@ -601,7 +630,6 @@ footer {
         img {
           width: 100%;
         }
-
         .detail {
           padding: 1rem;
           display: flex;
