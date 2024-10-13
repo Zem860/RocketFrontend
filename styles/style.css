@@ -673,13 +673,16 @@ footer ul .right img {
     flex-direction: column;
     align-items: start;
     border-bottom: 1px solid white;
+    width: 100%;
   }
   footer .upper {
     display: flex;
     flex-direction: row-reverse;
+    width: 100%;
   }
   footer .lower {
     display: flex;
+    width: 100%;
   }
   footer .contactInfo {
     width: 100%;
@@ -703,14 +706,16 @@ footer ul .right img {
   footer ul {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: start;
   }
   footer ul .left {
     display: none;
   }
   footer ul .right {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
+    align-items: center;
   }
   footer ul .right li {
     padding: 0rem 0.5rem;
