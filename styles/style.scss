@@ -638,12 +638,13 @@ footer {
     background-color: $main-red;
 
     .copyright {
-      width: 80%;
+      width: 100%;
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      .left{padding-left:1rem ;}
+      
+      .left{padding-left:1em ;}
       .right {
         display: flex;
         flex-direction: column;
@@ -652,9 +653,17 @@ footer {
 
     .contactInfoCase{
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
       align-items: start;
       border-bottom: 1px solid white;
+    }
+    .upper{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .lower{
+      display: flex;
+      
     }
     .contactInfo {
       width: 100%;
