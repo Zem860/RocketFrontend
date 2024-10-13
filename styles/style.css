@@ -609,6 +609,20 @@ footer ul .right img {
     font-family: "Roboto", sans-serif;
     padding: 0.5rem;
   }
+  .seriesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .seriesCards .card {
+    flex: 0 0 100%;
+  }
+  .seriesCards .card img {
+    width: 100%;
+  }
+  .seriesCards .card h3 {
+    font-size: 5rem;
+  }
   .recommendation .customerCards {
     display: flex;
     justify-content: space-around;

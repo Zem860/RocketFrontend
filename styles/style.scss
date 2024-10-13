@@ -614,6 +614,23 @@ footer {
       }
     }
   }
+
+  
+  .seriesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .card {
+      flex: 0 0 100%;
+      img{
+        width: 100%;
+      }
+      h3{
+        font-size: 5rem;
+      }
+    }
+  }
+
   .recommendation {
     .customerCards {
       display: flex;
