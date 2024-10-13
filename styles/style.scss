@@ -6,8 +6,13 @@
   font-family: $chinese-text;
 }
 
-html, body {
+html,
+body {
   height: 100%;
+}
+
+.showCase {
+  @include showCaseStyle();
 }
 
 nav {
@@ -81,11 +86,6 @@ nav {
   }
 }
 
-.feature {
-  background-color: #fbf2f2;
-  color: $main-red;
-}
-
 .featureWrapper {
   padding: 3rem 0rem;
   margin: 0 auto;
@@ -115,10 +115,6 @@ nav {
   }
 }
 
-.showCase {
-  @include showCaseStyle();
-}
-
 .seriesCards {
   font-family: $default-text;
   display: flex;
@@ -129,7 +125,6 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex: 1 0 300px;
 
     img {
       width: 100%;
@@ -140,71 +135,6 @@ nav {
     }
   }
 }
-
-.collab {
-  background-image: url(../images/index-bg.png);
-  background-position: center;
-  background-size: cover;
-  padding: 2rem 0rem;
-  .showCase {
-    .title {
-      @include titleStyles($color: white);
-    }
-    .cards {
-      display: flex;
-      justify-content: center;
-
-      img {
-        width: 100%;
-        display: block;
-      }
-      h3 {
-        background-color: white;
-        text-align: center;
-        font-size: 2rem;
-        color: $main-red;
-        font-weight: bold;
-        font-family: $default-text;
-        padding: 0.5rem;
-      }
-    }
-  }
-}
-
-.recommendation {
-  .customerCards {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    align-items: stretch; /* 確保所有卡片的高度一致 */
-
-    .customerCard {
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-      img{
-        width:100%
-      }
-      
-      .detail {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; 
-        flex-grow: 1;
-      }
-      p{
-        margin-bottom: 1rem;
-        color:gray;
-      }
-      .name,.comment{
-        font-weight: bold;
-        color:black;
-      }
-    }
-  }
-}
-
 
 .contact {
   background-color: #fbf2f2;
@@ -258,36 +188,38 @@ nav {
 
 footer {
   background-color: $main-red;
-  .showCase{
+  .showCase {
     width: 80%;
   }
-  .copyright{
+  .copyright {
     width: 100%;
-    color:white;
+    color: white;
     display: flex;
     justify-content: space-between;
-    .left,.right{
+    .left,
+    .right {
       padding: 2rem 0rem;
     }
-    .right{
+    .right {
       display: flex;
 
-      p{
+      p {
         padding: 0rem 1rem;
       }
     }
   }
-  .contactInfo{
+  .contactInfo {
     width: 100%;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid white;
     color: white;
-    .telephone, .email{
+    .telephone,
+    .email {
       display: flex;
       align-items: center;
       font-size: 3rem;
-      img{
+      img {
         margin-right: 1rem;
       }
     }
@@ -301,18 +233,18 @@ footer {
     .left {
       display: flex;
       font-size: 1.2rem;
-      color:white;
-      li{
+      color: white;
+      li {
         padding: 1rem 1.2rem;
       }
     }
     .right {
       display: flex;
       justify-content: space-around;
-      li{
+      li {
         padding: 1rem;
       }
-      img{
+      img {
         width: 4rem;
       }
     }
@@ -322,14 +254,445 @@ footer {
 /* 桌上型電腦：至少要1024px以上 */
 @media (min-width: 1024px) {
   /* 在這裡寫桌上型電腦的樣式 */
+  .feature {
+    background-color: #fbf2f2;
+    color: $main-red;
+  }
+
+  .seriesCards {
+    font-family: $default-text;
+    display: flex;
+    gap: 2rem;
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+      h3 {
+        color: $main-red;
+        font-size: 2rem;
+      }
+    }
+  }
+
+
+
+  .collab {
+    background-image: url(../images/index-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 0rem;
+    .showCase {
+      .title {
+        @include titleStyles($color: white);
+      }
+      .cards {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+        h3 {
+          background-color: white;
+          text-align: center;
+          font-size: 2rem;
+          color: $main-red;
+          font-weight: bold;
+          font-family: $default-text;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .recommendation {
+    .customerCards {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      align-items: stretch;
+
+      .customerCard {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        img {
+          width: 100%;
+        }
+
+        .detail {
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+        p {
+          margin-bottom: 1rem;
+          color: gray;
+        }
+        .name,
+        .comment {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+  }
+
 }
 
-/* 平板電腦：720px～1024px */
-@media (min-width: 720px) and (max-width: 1024px) {
-  /* 在這裡寫平板電腦的樣式 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bannerMessage {
+    top: 90px;
+    right: 50px;
+  }
+
+  .featureWrapper {
+    background-color: #fbf2f2;
+    width: 100%;
+  }
+
+  .featureCards {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    .card {
+      flex: 1 0 336px;
+    }
+  }
+
+  .seriesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .card {
+      flex: 0 0 336px;
+    }
+  }
+
+  .collab {
+    background-image: url('../images/index-bg-md.png');
+    background-size: cover;
+    padding: 2rem 0rem;
+    .title{
+      color: white;
+    }
+    .cards {
+      flex-wrap: wrap;
+      .card {
+        margin-bottom: 1rem;
+        img {
+          width: 100%;
+          display: block;
+        }
+        h3 {
+          background-color: white;
+          text-align: center;
+          font-size: 2rem;
+          color: $main-red;
+          font-weight: bold;
+          font-family: $default-text;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .recommendation {
+    .customerCards {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      align-items: stretch;
+      flex-wrap: wrap;
+
+      .customerCard {
+        display: flex;
+        flex: 0 0 336px;
+        flex-direction: column;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        img {
+          width: 100%;
+        }
+
+        .detail {
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+        p {
+          margin-bottom: 1rem;
+          color: gray;
+        }
+        .name,
+        .comment {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .contact {
+    background-color: #fbf2f2;
+    padding-bottom: 2rem;
+    .showCase {
+      width: 80%;
+    }
+  }
+
+  footer {
+    background-color: $main-red;
+    .showCase {
+      width: 80%;
+    }
+    .copyright {
+      width: 100%;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      .left,
+      .right {
+        padding: 2rem 0rem;
+      }
+      .right {
+        display: flex;
+  
+        p {
+          padding: 0rem 1rem;
+        }
+      }
+    }
+    .contactInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid white;
+      color: white;
+      .telephone,
+      .email {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        img {
+          margin-right: 1rem;
+        }
+      }
+    }
+    ul {
+      padding-top: 2rem;
+      width: 100%;
+      @include flexSetMiddle($flex-direction: row);
+      display: flex;
+      justify-content: space-between;
+      .left {
+        display: flex;
+        font-size: 1rem;
+        color: white;
+        li {
+          padding: 1rem 1rem;
+        }
+      }
+      .right {
+        display: flex;
+        justify-content: space-around;
+        li {
+          padding: 0.5rem;
+        }
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+
 }
 
 /* 手機：320px～720px */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   /* 在這裡寫手機的樣式 */
+  .banner {
+    background-image: url(../images/home-header-sm.png);
+    height: 80vh;
+  }
+  .bannerMessage {
+    top: 200px;
+    right: 30px;
+  }
+
+  .featureWrapper {
+    background-color: #fbf2f2;
+    width: 100%;
+    .featureCards {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .card {
+        flex: 0 0 348px;
+      }
+    }
+    .title {
+      @include titleStyles();
+      font-size: 2.5rem;
+    }
+  }
+
+  .seriesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .card {
+      flex: 0 0 348px;
+    }
+  }
+
+  .collab {
+    background-image: url('../images/index-bg-sm.png');
+    background-size: cover;
+    padding: 2rem 0rem;
+    .title{
+      color:white;
+    }
+    .cards {
+      flex-wrap: wrap;
+
+      .card {
+        margin-bottom: 1rem;
+        img {
+          width: 100%;
+          display: block;
+        }
+        h3 {
+          background-color: white;
+          text-align: center;
+          font-size: 2rem;
+          color: $main-red;
+          font-weight: bold;
+          font-family: $default-text;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+  .recommendation {
+    .customerCards {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      align-items: stretch;
+      flex-wrap: wrap;
+      .customerCard {
+        display: flex;
+        flex: 0 0 348;
+      
+        flex-direction: column;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        img {
+          width: 100%;
+        }
+
+        .detail {
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+        p {
+          margin-bottom: 1rem;
+          color: gray;
+        }
+        .name,
+        .comment {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .contact {
+    background-color: #fbf2f2;
+    padding-bottom: 2rem;
+    .showCase {
+      width: 80%;
+    }
+    button{
+      width: 100%;
+    }
+  }
+
+
+  footer {
+    background-color: $main-red;
+
+    .copyright {
+      width: 80%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .left{padding-left:1rem ;}
+      .right {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .contactInfoCase{
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: start;
+      border-bottom: 1px solid white;
+    }
+    .contactInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      border:0;
+      color: white;
+      .telephone,
+      .email {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        img {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        display: none;
+      }
+      .right {
+        display: flex;
+        justify-content: space-around;
+        li {
+          padding: 0rem 0.5rem ;
+        }
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
 }

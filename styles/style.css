@@ -10,8 +10,26 @@
   font-family: "Noto Sans TC", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
+}
+
+.showCase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 5rem;
+}
+.showCase .title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #650300;
+  padding-top: 2rem;
 }
 
 nav {
@@ -83,11 +101,6 @@ nav .nav-links li {
   font-weight: bold;
 }
 
-.feature {
-  background-color: #fbf2f2;
-  color: #AA0601;
-}
-
 .featureWrapper {
   padding: 3rem 0rem;
   margin: 0 auto;
@@ -126,23 +139,6 @@ nav .nav-links li {
   color: black;
 }
 
-.showCase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 80%;
-  margin-bottom: 5rem;
-}
-.showCase .title {
-  margin-bottom: 2rem;
-  font-weight: bold;
-  font-size: 3rem;
-  color: #650300;
-  padding-top: 2rem;
-}
-
 .seriesCards {
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -154,7 +150,6 @@ nav .nav-links li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 1 0 300px;
 }
 .seriesCards .card img {
   width: 100%;
@@ -162,66 +157,6 @@ nav .nav-links li {
 .seriesCards .card h3 {
   color: #AA0601;
   font-size: 2rem;
-}
-
-.collab {
-  background-image: url(../images/index-bg.png);
-  background-position: center;
-  background-size: cover;
-  padding: 2rem 0rem;
-}
-.collab .showCase .title {
-  margin-bottom: 2rem;
-  font-weight: bold;
-  font-size: 3rem;
-  color: white;
-}
-.collab .showCase .cards {
-  display: flex;
-  justify-content: center;
-}
-.collab .showCase .cards img {
-  width: 100%;
-  display: block;
-}
-.collab .showCase .cards h3 {
-  background-color: white;
-  text-align: center;
-  font-size: 2rem;
-  color: #AA0601;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  padding: 0.5rem;
-}
-
-.recommendation .customerCards {
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-  align-items: stretch; /* 確保所有卡片的高度一致 */
-}
-.recommendation .customerCards .customerCard {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-.recommendation .customerCards .customerCard img {
-  width: 100%;
-}
-.recommendation .customerCards .customerCard .detail {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-}
-.recommendation .customerCards .customerCard p {
-  margin-bottom: 1rem;
-  color: gray;
-}
-.recommendation .customerCards .customerCard .name, .recommendation .customerCards .customerCard .comment {
-  font-weight: bold;
-  color: black;
 }
 
 .contact {
@@ -286,7 +221,8 @@ footer .copyright {
   display: flex;
   justify-content: space-between;
 }
-footer .copyright .left, footer .copyright .right {
+footer .copyright .left,
+footer .copyright .right {
   padding: 2rem 0rem;
 }
 footer .copyright .right {
@@ -302,12 +238,14 @@ footer .contactInfo {
   border-bottom: 1px solid white;
   color: white;
 }
-footer .contactInfo .telephone, footer .contactInfo .email {
+footer .contactInfo .telephone,
+footer .contactInfo .email {
   display: flex;
   align-items: center;
   font-size: 3rem;
 }
-footer .contactInfo .telephone img, footer .contactInfo .email img {
+footer .contactInfo .telephone img,
+footer .contactInfo .email img {
   margin-right: 1rem;
 }
 footer ul {
@@ -342,12 +280,413 @@ footer ul .right img {
 /* 桌上型電腦：至少要1024px以上 */
 @media (min-width: 1024px) {
   /* 在這裡寫桌上型電腦的樣式 */
+  .feature {
+    background-color: #fbf2f2;
+    color: #AA0601;
+  }
+  .seriesCards {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    gap: 2rem;
+  }
+  .seriesCards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .seriesCards .card img {
+    width: 100%;
+  }
+  .seriesCards .card h3 {
+    color: #AA0601;
+    font-size: 2rem;
+  }
+  .collab {
+    background-image: url(../images/index-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 0rem;
+  }
+  .collab .showCase .title {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+  }
+  .collab .showCase .cards {
+    display: flex;
+    justify-content: center;
+  }
+  .collab .showCase .cards img {
+    width: 100%;
+    display: block;
+  }
+  .collab .showCase .cards h3 {
+    background-color: white;
+    text-align: center;
+    font-size: 2rem;
+    color: #AA0601;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    padding: 0.5rem;
+  }
+  .recommendation .customerCards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .recommendation .customerCards .customerCard {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  .recommendation .customerCards .customerCard img {
+    width: 100%;
+  }
+  .recommendation .customerCards .customerCard .detail {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  .recommendation .customerCards .customerCard p {
+    margin-bottom: 1rem;
+    color: gray;
+  }
+  .recommendation .customerCards .customerCard .name,
+  .recommendation .customerCards .customerCard .comment {
+    font-weight: bold;
+    color: black;
+  }
 }
-/* 平板電腦：720px～1024px */
-@media (min-width: 720px) and (max-width: 1024px) {
-  /* 在這裡寫平板電腦的樣式 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bannerMessage {
+    top: 90px;
+    right: 50px;
+  }
+  .featureWrapper {
+    background-color: #fbf2f2;
+    width: 100%;
+  }
+  .featureCards {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .featureCards .card {
+    flex: 1 0 336px;
+  }
+  .seriesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .seriesCards .card {
+    flex: 0 0 336px;
+  }
+  .collab {
+    background-image: url("../images/index-bg-md.png");
+    background-size: cover;
+    padding: 2rem 0rem;
+  }
+  .collab .title {
+    color: white;
+  }
+  .collab .cards {
+    flex-wrap: wrap;
+  }
+  .collab .cards .card {
+    margin-bottom: 1rem;
+  }
+  .collab .cards .card img {
+    width: 100%;
+    display: block;
+  }
+  .collab .cards .card h3 {
+    background-color: white;
+    text-align: center;
+    font-size: 2rem;
+    color: #AA0601;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    padding: 0.5rem;
+  }
+  .recommendation .customerCards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .recommendation .customerCards .customerCard {
+    display: flex;
+    flex: 0 0 336px;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  .recommendation .customerCards .customerCard img {
+    width: 100%;
+  }
+  .recommendation .customerCards .customerCard .detail {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  .recommendation .customerCards .customerCard p {
+    margin-bottom: 1rem;
+    color: gray;
+  }
+  .recommendation .customerCards .customerCard .name,
+  .recommendation .customerCards .customerCard .comment {
+    font-weight: bold;
+    color: black;
+  }
+  .contact {
+    background-color: #fbf2f2;
+    padding-bottom: 2rem;
+  }
+  .contact .showCase {
+    width: 80%;
+  }
+  footer {
+    background-color: #AA0601;
+  }
+  footer .showCase {
+    width: 80%;
+  }
+  footer .copyright {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .copyright .left,
+  footer .copyright .right {
+    padding: 2rem 0rem;
+  }
+  footer .copyright .right {
+    display: flex;
+  }
+  footer .copyright .right p {
+    padding: 0rem 1rem;
+  }
+  footer .contactInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+    color: white;
+  }
+  footer .contactInfo .telephone,
+  footer .contactInfo .email {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  footer .contactInfo .telephone img,
+  footer .contactInfo .email img {
+    margin-right: 1rem;
+  }
+  footer ul {
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer ul .left {
+    display: flex;
+    font-size: 1rem;
+    color: white;
+  }
+  footer ul .left li {
+    padding: 1rem 1rem;
+  }
+  footer ul .right {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer ul .right li {
+    padding: 0.5rem;
+  }
+  footer ul .right img {
+    width: 2rem;
+  }
 }
 /* 手機：320px～720px */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   /* 在這裡寫手機的樣式 */
+  .banner {
+    background-image: url(../images/home-header-sm.png);
+    height: 80vh;
+  }
+  .bannerMessage {
+    top: 200px;
+    right: 30px;
+  }
+  .featureWrapper {
+    background-color: #fbf2f2;
+    width: 100%;
+  }
+  .featureWrapper .featureCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .featureWrapper .featureCards .card {
+    flex: 0 0 348px;
+  }
+  .featureWrapper .title {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #650300;
+    font-size: 2.5rem;
+  }
+  .seriesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .seriesCards .card {
+    flex: 0 0 348px;
+  }
+  .collab {
+    background-image: url("../images/index-bg-sm.png");
+    background-size: cover;
+    padding: 2rem 0rem;
+  }
+  .collab .title {
+    color: white;
+  }
+  .collab .cards {
+    flex-wrap: wrap;
+  }
+  .collab .cards .card {
+    margin-bottom: 1rem;
+  }
+  .collab .cards .card img {
+    width: 100%;
+    display: block;
+  }
+  .collab .cards .card h3 {
+    background-color: white;
+    text-align: center;
+    font-size: 2rem;
+    color: #AA0601;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    padding: 0.5rem;
+  }
+  .recommendation .customerCards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .recommendation .customerCards .customerCard {
+    display: flex;
+    flex: 0 0 348;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  .recommendation .customerCards .customerCard img {
+    width: 100%;
+  }
+  .recommendation .customerCards .customerCard .detail {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  .recommendation .customerCards .customerCard p {
+    margin-bottom: 1rem;
+    color: gray;
+  }
+  .recommendation .customerCards .customerCard .name,
+  .recommendation .customerCards .customerCard .comment {
+    font-weight: bold;
+    color: black;
+  }
+  .contact {
+    background-color: #fbf2f2;
+    padding-bottom: 2rem;
+  }
+  .contact .showCase {
+    width: 80%;
+  }
+  .contact button {
+    width: 100%;
+  }
+  footer {
+    background-color: #AA0601;
+  }
+  footer .copyright {
+    width: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .copyright .left {
+    padding-left: 1rem;
+  }
+  footer .copyright .right {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .contactInfoCase {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    border-bottom: 1px solid white;
+  }
+  footer .contactInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border: 0;
+    color: white;
+  }
+  footer .contactInfo .telephone,
+  footer .contactInfo .email {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+  footer .contactInfo .telephone img,
+  footer .contactInfo .email img {
+    margin-right: 1rem;
+  }
+  footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer ul .left {
+    display: none;
+  }
+  footer ul .right {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer ul .right li {
+    padding: 0rem 0.5rem;
+  }
+  footer ul .right img {
+    width: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
